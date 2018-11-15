@@ -10,6 +10,9 @@
 
 .hero-media {
     position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     height: 200px;
     margin-top: 40px;
     background: color(bg, 1);
@@ -27,7 +30,7 @@
     }
 }
 
-@include media( '>medium' ) {
+@include media('>medium') {
 
     .hero {
         padding-top: 80px;
