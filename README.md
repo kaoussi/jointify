@@ -9,7 +9,7 @@ Official Source code of Jointify, Get mentorship from the right people.
 1.  **Clone this site.**
 
     ```sh
-    git clone {put link of repo here}
+    git clone https://github.com/kaoussi/jointify.git
     ```
 
 1.  **Start developing.**
@@ -17,7 +17,7 @@ Official Source code of Jointify, Get mentorship from the right people.
     Navigate into your new site’s directory and start it up.
 
     ```sh
-    cd {name of directory}
+    cd jointify
     gatsby develop
     ```
 
