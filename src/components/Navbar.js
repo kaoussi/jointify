@@ -21,10 +21,9 @@ const Navbar = ({ siteTitle }) => (
     </div>
     <ul className="header-links list-reset m-0">
       <li>
-        <a href="/login">Login</a>
-      </li>
-      <li>
-        <a className="button button-sm button-shadow" href="/signup">Signup</a>
+        <Link to="/signup" className="button button-sm button-shadow">
+        Get Started
+        </Link>
       </li>
     </ul>
   </div>

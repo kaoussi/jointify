@@ -1,8 +1,10 @@
 import React from 'react'
 import styled from 'styled-components'
+import { Link } from 'gatsby'
 
 import Layout from '../components/layout'
 import Features from '../components/Features'
+import MentorsSection from '../components/MentorsSection'
 import Conversation from '../../static/svg/conversation.svg'
 
 const SvgImage = styled(Conversation)`
@@ -24,7 +26,7 @@ const IndexPage = () => (
           <div className="hero-inner">
             <h1 className="hero-title h2-mobile mt-0 is-revealing">On-demand mentorship <br/> For aspiring creatives.</h1>
             <p className="hero-paragraph is-revealing">Find the perfect mentor to help you launch your creative career.</p>
-            <p className="hero-cta is-revealing"><a className="button button-secondary button-shadow" href="/get-started">Get Started Now</a></p>
+            <p className="hero-cta is-revealing"><Link to="/get-started" className="button button-secondary button-shadow">Find your mentor Now</Link></p>
             <Div className="hero-media">
               {IllustrationSrc}
             </Div>
@@ -32,6 +34,7 @@ const IndexPage = () => (
         </div>
       </section>
       <Features/>
+      <MentorsSection/>
     </main>
   </Layout>
 )

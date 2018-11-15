@@ -5,6 +5,7 @@ import { StaticQuery, graphql } from 'gatsby'
 
 
 import Header from './header'
+import Footer from './Footer'
 
 import '../assets/sass/style.scss';
 
@@ -31,6 +32,7 @@ const Layout = ({ children }) => (
         <Header />
         <div className="body-wrap boxed-container">
           {children}
+          <Footer/>
         </div>
       </>
     )}

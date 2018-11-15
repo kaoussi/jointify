@@ -25,10 +25,10 @@ const Features = () => (
       <div className="features-inner section-inner has-top-divider">
           <h2 className="section-title mt-0">What you get</h2>
           <div className="features-wrap">
-            <Card title="Lorem Ipsum" content="often arouses curiosity due to its resemblance to classical latin" icon={Icon1Src}/>
-            <Card title="Lorem Ipsum" content="often arouses curiosity due to its resemblance to classical latin" icon={Icon2Src}/>
-            <Card title="Lorem Ipsum" content="often arouses curiosity due to its resemblance to classical latin" icon={Icon3Src}/>
-            <Card title="Lorem Ipsum" content="often arouses curiosity due to its resemblance to classical latin" icon={Icon4Src}/>
+            <Card title="Find your mentor" content="Browse to find the perfect mentor for you" icon={Icon1Src}/>
+            <Card title="Request a session" content="Request a session and tell us what would you like to cover" icon={Icon2Src}/>
+            <Card title="Learn Directly & Engage" content="Meet your mentor personally, or engage via 1-on-1 video chat" icon={Icon3Src}/>
+            <Card title="Follow up" content="After the session, your mentor will follow up with you, giving you notes and next steps" icon={Icon4Src}/>
           </div>
       </div>
   </div>

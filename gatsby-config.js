@@ -18,7 +18,7 @@ module.exports = {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: 'jointify-artisoft',
-        short_name: 'Jointify',
+        short_name: 'jointify',
         start_url: '/',
         background_color: '#00eece',
         theme_color: '#00eece',
