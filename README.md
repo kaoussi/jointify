@@ -1,5 +1,5 @@
 <h1 align="center">
-  Jointify
+  Jointify by <a href="https://www.artisoft.ma">Artisoft.ma</a>
 </h1>
 
 Official Source code of Jointify, Get mentorship from the right people.
