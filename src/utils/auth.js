@@ -11,7 +11,10 @@ export default class Auth {
   auth0 = new auth0.WebAuth({
     domain: AUTH0_DOMAIN,
     clientID: AUTH0_CLIENT_ID,
-    redirectUri: REDIRECT_LINK,
+    redirectUri:
+      process.env.NODE_ENV === 'development'
+        ? 'http://localhost:8000/callback'
+        : 'https://jointify.artisoft.ma/callback',
     audience: `https://${AUTH0_DOMAIN}/api/v2/`,
     responseType: 'token id_token',
     scope: 'openid profile email',
