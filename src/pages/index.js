@@ -6,6 +6,7 @@ import Layout from '../components/layout'
 import Features from '../components/Features'
 import MentorsSection from '../components/MentorsSection'
 import Pricing from '../components/Pricing'
+import CtaSection from '../components/CtaSection'
 import Conversation from '../../static/svg/conversation.svg'
 
 const SvgImage = styled(Conversation)`
@@ -43,6 +44,7 @@ const IndexPage = () => (
       <Features />
       <MentorsSection />
       <Pricing />
+      <CtaSection />
     </main>
   </Layout>
 )

@@ -6,15 +6,15 @@ const SignUp = () => {
     <Layout>
       <main>
         <section className="hero text-light text-center">
-        <div className="container-sm">
-          <div className="hero-inner">
-            <h1>Sign Up! (Coming soon)</h1>
+          <div className="container-sm">
+            <div className="hero-inner">
+              <h1>Sign Up! (Coming soon)</h1>
+            </div>
           </div>
-        </div>
         </section>
       </main>
     </Layout>
   )
 }
 
-export default SignUp;
+export default SignUp
