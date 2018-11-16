@@ -18,12 +18,13 @@ const CtaSection = () => {
                 type="email"
                 name="email"
                 placeholder="Your best email&hellip;"
+                required
               />
             </div>
             <div className="control">
               <a
                 className="button button-primary button-block button-shadow"
-                href="/"
+                href="/success/"
               >
                 Early access
               </a>
