@@ -4,7 +4,7 @@ import { Link } from 'gatsby'
 
 import Layout from '../components/layout'
 import Features from '../components/Features'
-import MentorsSection from '../components/MentorsSection'
+import TeamTestimonial from '../components/TeamTestimonial'
 import Pricing from '../components/Pricing'
 import CtaSection from '../components/CtaFormSection'
 import Conversation from '../../static/svg/conversation.svg'
@@ -42,7 +42,7 @@ const IndexPage = () => (
         </div>
       </section>
       <Features />
-      <MentorsSection />
+      <TeamTestimonial />
       <Pricing />
       <CtaSection />
     </main>
