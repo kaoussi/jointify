@@ -14,7 +14,7 @@ export default class Auth {
     redirectUri: REDIRECT_LINK,
     audience: `https://${AUTH0_DOMAIN}/api/v2/`,
     responseType: 'token id_token',
-    scope: 'openid',
+    scope: 'openid profile email',
   })
 
   constructor() {
