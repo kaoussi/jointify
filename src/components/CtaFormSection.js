@@ -1,4 +1,9 @@
 import React from 'react'
+import styled from 'styled-components'
+
+const A = styled.a`
+  pointer-events: none;
+`
 
 const CtaSection = () => {
   return (
@@ -22,12 +27,12 @@ const CtaSection = () => {
               />
             </div>
             <div className="control">
-              <a
+              <A
                 className="button button-primary button-block button-shadow"
                 href="/success/"
               >
                 Early access
-              </a>
+              </A>
             </div>
           </div>
         </div>

@@ -1,5 +1,10 @@
 import React from 'react'
 import { Link } from 'gatsby'
+import styled from 'styled-components'
+
+const Lien = styled(Link)`
+  pointer-events: none;
+`
 
 const PriceCard = ({
   title,
@@ -44,12 +49,12 @@ const PriceCard = ({
             </ul>{' '}
           </div>{' '}
           <div className="pricing-table-cta">
-            <Link
+            <Lien
               className={`button button-${color} button-block`}
               to="/get-started"
             >
               {buttonText}{' '}
-            </Link>{' '}
+            </Lien>{' '}
           </div>{' '}
         </div>{' '}
       </div>{' '}

@@ -9,8 +9,8 @@ const TeamTestimonial = () => (
   <section className="testimonials section">
     <div className="container">
       <div className="ftestimonials-inner section-inner">
-        <h2 class="section-title mt-0 text-center">Our Mentors</h2>
-        <div class="testimonials-wrap">
+        <h2 className="section-title mt-0 text-center">Our Mentors</h2>
+        <div className="testimonials-wrap">
           <TestimonialCard
             name="KAOUSSI Souhail"
             content=""
