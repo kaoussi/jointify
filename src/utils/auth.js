@@ -36,21 +36,22 @@ export default class Auth {
 
   handleAuthentication() {
     if (typeof window !== 'undefined') {
-    this.auth0.parseHash((err, authResult) => {
-      if (authResult && authResult.accessToken && authResult.idToken) {
-        this.setSession(authResult)
-        navigateTo('/')
-      } else if (err) {
-        navigateTo('/')
-        console.log(err)
-        swal({
-          title: 'Oh! :( Sorry we could not log you in!',
-          text: 'Totally our fault, please try later',
-          type: 'error',
-          confirmButtonText: 'Sure!',
-        })
-      }
-    })
+      this.auth0.parseHash((err, authResult) => {
+        if (authResult && authResult.accessToken && authResult.idToken) {
+          this.setSession(authResult)
+          navigateTo('/')
+        } else if (err) {
+          navigateTo('/')
+          console.log(err)
+          swal({
+            title: 'Oh! :( Sorry we could not log you in!',
+            text: 'Totally our fault, please try later',
+            type: 'error',
+            confirmButtonText: 'Sure!',
+          })
+        }
+      })
+    }
   }
 
   setSession(authResult) {
