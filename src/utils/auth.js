@@ -5,12 +5,13 @@ import { navigateTo } from 'gatsby-link'
 
 const AUTH0_DOMAIN = process.env.AUTH0_DOMAIN
 const AUTH0_CLIENT_ID = process.env.AUTH0_CLIENT_ID
+const REDIRECT_LINK = process.env.REDIRECT_LINK
 
 export default class Auth {
   auth0 = new auth0.WebAuth({
     domain: AUTH0_DOMAIN,
     clientID: AUTH0_CLIENT_ID,
-    redirectUri: 'http://localhost:8000/callback',
+    redirectUri: REDIRECT_LINK,
     audience: `https://${AUTH0_DOMAIN}/api/v2/`,
     responseType: 'token id_token',
     scope: 'openid',
