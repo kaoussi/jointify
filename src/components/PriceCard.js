@@ -49,10 +49,7 @@ const PriceCard = ({
             </ul>{' '}
           </div>{' '}
           <div className="pricing-table-cta">
-            <Lien
-              className={`button button-${color} button-block`}
-              to="/get-started"
-            >
+            <Lien className={`button button-${color} button-block`} to="/">
               {buttonText}{' '}
             </Lien>{' '}
           </div>{' '}
