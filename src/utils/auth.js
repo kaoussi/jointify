@@ -6,38 +6,46 @@ import { navigateTo } from 'gatsby-link'
 const AUTH0_DOMAIN = process.env.AUTH0_DOMAIN
 const AUTH0_CLIENT_ID = process.env.AUTH0_CLIENT_ID
 
-export default class Auth {
-  auth0 = new auth0.WebAuth({
-    domain: AUTH0_DOMAIN,
-    clientID: AUTH0_CLIENT_ID,
-    redirectUri:
-      process.env.NODE_ENV === 'development'
-        ? 'http://localhost:8000/callback'
-        : 'https://jointify.artisoft.ma/callback',
-    audience: `https://${AUTH0_DOMAIN}/api/v2/`,
-    responseType: 'token id_token',
-    scope: 'openid profile email',
-  })
+const isBrowser = typeof window !== 'undefined'
+let profile = false
 
-  constructor() {
-    this.login = this.login.bind(this)
-    this.logout = this.logout.bind(this)
-    this.handleAuthentication = this.handleAuthentication.bind(this)
-    this.isAuthenticated = this.isAuthenticated.bind(this)
-  }
+export default class Auth {
+  auth0 = isBrowser
+    ? new auth0.WebAuth({
+        domain: AUTH0_DOMAIN,
+        clientID: AUTH0_CLIENT_ID,
+        redirectUri:
+          process.env.NODE_ENV === 'development'
+            ? 'http://localhost:8000/callback'
+            : 'https://jointify.artisoft.ma/callback',
+        audience: `https://${AUTH0_DOMAIN}/api/v2/`,
+        responseType: 'token id_token',
+        scope: 'openid profile email',
+      })
+    : {}
 
   login() {
+    if (!isBrowser) {
+      return
+    }
     this.auth0.authorize()
   }
 
-  logout() {
-    localStorage.removeItem('access_token')
-    localStorage.removeItem('id_token')
-    localStorage.removeItem('expires_at')
-    localStorage.removeItem('user')
+  logout = () => {
+    if (isBrowser) {
+      localStorage.removeItem('access_token')
+      localStorage.removeItem('id_token')
+      localStorage.removeItem('expires_at')
+    }
+
+    profile = false
   }
 
-  handleAuthentication() {
+  handleAuthentication = () => {
+    if (!isBrowser) {
+      return
+    }
+
     this.auth0.parseHash((err, authResult) => {
       if (authResult && authResult.accessToken && authResult.idToken) {
         this.setSession(authResult)
@@ -55,12 +63,21 @@ export default class Auth {
     })
   }
 
-  isAuthenticated() {
-    const expiresAt = JSON.parse(localStorage.getItem('expires_at'))
+  isAuthenticated = () => {
+    if (!isBrowser) {
+      // For SSR, we’re never authenticated.
+      return false
+    }
+
+    let expiresAt = JSON.parse(localStorage.getItem('expires_at'))
     return new Date().getTime() < expiresAt
   }
 
   setSession(authResult) {
+    if (!isBrowser) {
+      return
+    }
+
     const expiresAt = JSON.stringify(
       authResult.expiresIn * 1000 + new Date().getTime()
     )
