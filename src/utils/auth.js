@@ -3,25 +3,21 @@ import swal from 'sweetalert2'
 
 import { navigateTo } from 'gatsby-link'
 
-export const isBrowser = typeof window !== 'undefined'
-
 const AUTH0_DOMAIN = process.env.AUTH0_DOMAIN
 const AUTH0_CLIENT_ID = process.env.AUTH0_CLIENT_ID
 
 export default class Auth {
-  auth0 = isBrowser
-    ? new auth0.WebAuth({
-        domain: AUTH0_DOMAIN,
-        clientID: AUTH0_CLIENT_ID,
-        redirectUri:
-          process.env.NODE_ENV === 'development'
-            ? 'http://localhost:8000/callback'
-            : 'https://jointify.artisoft.ma/callback',
-        audience: `https://${AUTH0_DOMAIN}/api/v2/`,
-        responseType: 'token id_token',
-        scope: 'openid profile email',
-      })
-    : {}
+  auth0 = new auth0.WebAuth({
+    domain: AUTH0_DOMAIN,
+    clientID: AUTH0_CLIENT_ID,
+    redirectUri:
+      process.env.NODE_ENV === 'development'
+        ? 'http://localhost:8000/callback'
+        : 'https://jointify.artisoft.ma/callback',
+    audience: `https://${AUTH0_DOMAIN}/api/v2/`,
+    responseType: 'token id_token',
+    scope: 'openid profile email',
+  })
 
   constructor() {
     this.login = this.login.bind(this)
@@ -31,10 +27,6 @@ export default class Auth {
   }
 
   login() {
-    if (!isBrowser) {
-      return
-    }
-
     this.auth0.authorize()
   }
 
@@ -46,10 +38,6 @@ export default class Auth {
   }
 
   handleAuthentication() {
-    if (!isBrowser) {
-      return
-    }
-
     this.auth0.parseHash((err, authResult) => {
       if (authResult && authResult.accessToken && authResult.idToken) {
         this.setSession(authResult)
@@ -73,10 +61,6 @@ export default class Auth {
   }
 
   setSession(authResult) {
-    if (!isBrowser) {
-      return
-    }
-
     const expiresAt = JSON.stringify(
       authResult.expiresIn * 1000 + new Date().getTime()
     )
