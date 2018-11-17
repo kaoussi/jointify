@@ -44,7 +44,6 @@ export default class Auth {
           this.setSession(authResult)
           navigateTo('/')
         } else if (err) {
-          navigateTo('/')
           console.log(err)
           swal({
             title: 'Oh! :( Sorry we could not log you in!',
@@ -52,9 +51,15 @@ export default class Auth {
             type: 'error',
             confirmButtonText: 'Sure!',
           })
+          navigateTo('/')
         }
       })
     }
+  }
+
+  isAuthenticated() {
+    const expiresAt = JSON.parse(localStorage.getItem('expires_at'))
+    return new Date().getTime() < expiresAt
   }
 
   setSession(authResult) {
@@ -68,11 +73,6 @@ export default class Auth {
     this.auth0.client.userInfo(authResult.accessToken, (err, user) => {
       localStorage.setItem('user', JSON.stringify(user))
     })
-  }
-
-  isAuthenticated() {
-    const expiresAt = JSON.parse(localStorage.getItem('expires_at'))
-    return new Date().getTime() < expiresAt
   }
 
   getUser() {

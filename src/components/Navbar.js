@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { Link } from 'gatsby'
 
 import Auth from '../utils/auth'
+
 const auth = new Auth()
 
 class Navbar extends Component {
