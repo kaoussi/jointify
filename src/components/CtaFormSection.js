@@ -1,9 +1,5 @@
 import React from 'react'
-import styled from 'styled-components'
-
-const A = styled.a`
-  pointer-events: none;
-`
+import { withPrefix } from 'gatsby-link'
 
 const CtaSection = () => {
   return (
@@ -16,25 +12,33 @@ const CtaSection = () => {
               Be The first to learn about our offers.
             </p>
           </div>
-          <div className="footer-form newsletter-form field field-grouped">
-            <div className="control control-expanded">
-              <input
-                className="input"
-                type="email"
-                name="email"
-                placeholder="Your best email&hellip;"
-                required
-              />
+          <form
+            action="https://formspree.io/kaoussi.souhail@artisoft.ma"
+            method="POST"
+          >
+            <div className="footer-form newsletter-form field field-grouped">
+              <div className="control control-expanded">
+                <input type="hidden" name="_subject" value="Contact Form" />
+                <input
+                  name="_next"
+                  value={withPrefix(`/success`)}
+                  type="hidden"
+                />
+                <input
+                  className="input"
+                  type="email"
+                  name="email"
+                  placeholder="Your best email&hellip;"
+                  required
+                />
+              </div>
+              <div className="control">
+                <button className="button button-primary button-block button-shadow">
+                  Early access
+                </button>
+              </div>
             </div>
-            <div className="control">
-              <A
-                className="button button-primary button-block button-shadow"
-                href="/success/"
-              >
-                Early access
-              </A>
-            </div>
-          </div>
+          </form>
         </div>
       </div>
     </section>

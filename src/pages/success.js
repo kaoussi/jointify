@@ -1,14 +1,7 @@
 import React from 'react'
 import Helmet from 'react-helmet'
 import { Link } from 'gatsby'
-import styled from 'styled-components'
 import Layout from '../components/layout'
-
-import astronaut from '../images/gatsby-astronaut.png'
-
-const Astronaut = styled.img`
-  height: 45vh;
-`
 
 const Success = props => (
   <Layout>
@@ -30,9 +23,6 @@ const Success = props => (
                 Click here to go back
               </Link>
             </p>
-            <div className="hero-media">
-              <Astronaut src={astronaut} alt="Astronaut" />
-            </div>
           </div>
         </div>
       </section>
