@@ -1,7 +1,14 @@
+const config = require('./data/Config')
+
+require('dotenv').config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
+
 module.exports = {
   siteMetadata: {
-    title: 'Jointify',
-    author: 'Artisoft'
+    site_url: config.url,
+    title: config.title,
+    author: config.author,
   },
   plugins: [
     'gatsby-plugin-react-helmet',
@@ -12,22 +19,43 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
+    {
+      resolve: `gatsby-plugin-google-tagmanager`,
+      options: {
+        id: config.googleTagManagerID,
+
+        // Include GTM in development.
+        // Defaults to false meaning GTM will only be loaded in production.
+        includeInDevelopment: true,
+
+        // Specify optional GTM environment details.
+        // gtmAuth: 'YOUR_GOOGLE_TAGMANAGER_ENVIROMENT_AUTH_STRING',
+        // gtmPreview: 'YOUR_GOOGLE_TAGMANAGER_ENVIROMENT_PREVIEW_NAME',
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-google-analytics',
+      options: {
+        trackingId: config.googleAnalyticsID,
+        head: true,
+      },
+    },
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: 'jointify-artisoft',
-        short_name: 'jointify',
+        name: config.title,
+        short_name: config.title,
         start_url: '/',
-        background_color: '#00eece',
-        theme_color: '#00eece',
+        background_color: config.backgroundColor,
+        theme_color: config.themeColor,
         display: 'minimal-ui',
-        icon: 'src/images/icon.png', // This path is relative to the root of the site.
+        icon: 'src/images/icon.png',
       },
     },
     'gatsby-plugin-sass',
     'gatsby-plugin-offline',
-    'gatsby-plugin-react-svg'
+    'gatsby-plugin-react-svg',
   ],
 }

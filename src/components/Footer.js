@@ -14,7 +14,7 @@ const Footer = ({ siteTitle }) => {
       <div className="container">
         <div className="site-footer-inner has-top-divider">
           <div className="footer-copyright">
-            &copy; 2018 |{' '}
+            &copy; {new Date().getFullYear()} |{' '}
             <Lien href="https://www.artisoft.ma">
               <CompanyName>Artisoft</CompanyName>
             </Lien>
