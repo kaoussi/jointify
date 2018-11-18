@@ -1,48 +1,96 @@
 import React from 'react'
-import { withPrefix } from 'gatsby-link'
+import addToMailchimp from 'gatsby-plugin-mailchimp'
+import swal from 'sweetalert2'
+import { ClipLoader } from 'react-spinners'
+import styled from 'styled-components'
 
-const CtaSection = () => {
-  return (
-    <section className="newsletter section text-light">
-      <div className="container-sm">
-        <div className="newsletter-inner section-inner">
-          <div className="newsletter-header text-center">
-            <h2 className="section-title mt-0">Stay in the know</h2>
-            <p className="section-paragraph">
-              Be The first to learn about our offers.
-            </p>
-          </div>
-          <form
-            action="https://formspree.io/kaoussi.souhail@artisoft.ma"
-            method="POST"
-          >
-            <div className="footer-form newsletter-form field field-grouped">
-              <div className="control control-expanded">
-                <input type="hidden" name="_subject" value="Contact Form" />
-                <input
-                  name="_next"
-                  value={withPrefix(`/success`)}
-                  type="hidden"
-                />
-                <input
-                  className="input"
-                  type="email"
-                  name="email"
-                  placeholder="Your best email&hellip;"
-                  required
-                />
-              </div>
-              <div className="control">
-                <button className="button button-primary button-block button-shadow">
-                  Early access
-                </button>
-              </div>
+const Clip = styled(ClipLoader)`
+  display: block;
+  margin: 0 auto;
+  border-color: red;
+`
+
+class CtaSection extends React.Component {
+  state = {
+    email: '',
+    mailChimpResult: null,
+    loading: false,
+  }
+
+  _handleSubmit = async event => {
+    event.preventDefault()
+
+    const { email } = this.state
+    const listFields = { email }
+    this.setState({ loading: true })
+
+    const result = await addToMailchimp(email, listFields)
+    // I recommend setting `result` to React state
+    // but you can do whatever you want
+
+    this.setState({ mailChimpResult: result, email: '' })
+    console.log(result)
+    swal({
+      title: result.result,
+      text: result.msg,
+      icon: 'success',
+      button: 'OK.!',
+    })
+    this.setState({ loading: false })
+  }
+
+  render() {
+    const { email, loading } = this.state
+    return (
+      <section className="newsletter section text-light">
+        <div className="container-sm">
+          <div className="newsletter-inner section-inner">
+            <div className="newsletter-header text-center">
+              <h2 className="section-title mt-0">Stay in the know</h2>
+              <p className="section-paragraph">
+                Be The first to learn about our offers.
+              </p>
             </div>
-          </form>
+            <form onSubmit={this._handleSubmit}>
+              <div className="footer-form newsletter-form field field-grouped">
+                <div className="control control-expanded">
+                  <input
+                    className="input"
+                    type="email"
+                    name="email"
+                    id="mailchimp-email"
+                    placeholder="Your best email&hellip;"
+                    value={email}
+                    onChange={event =>
+                      this.setState({ email: event.target.value })
+                    }
+                  />
+                </div>
+                <div className="control">
+                  {loading ? (
+                    <Clip
+                      sizeUnit={'px'}
+                      size={150}
+                      color={'#123abc'}
+                      loading={loading}
+                    />
+                  ) : (
+                    <button
+                      type="submit"
+                      className="button button-primary button-block button-shadow"
+                      disabled={loading}
+                    >
+                      Early access
+                    </button>
+                  )}
+                </div>
+              </div>
+            </form>
+          </div>
         </div>
-      </div>
-    </section>
-  )
+      </section>
+    )
+  }
 }
 
 export default CtaSection

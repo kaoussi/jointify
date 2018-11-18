@@ -26,7 +26,7 @@ module.exports = {
 
         // Include GTM in development.
         // Defaults to false meaning GTM will only be loaded in production.
-        includeInDevelopment: true,
+        includeInDevelopment: false,
 
         // Specify optional GTM environment details.
         // gtmAuth: 'YOUR_GOOGLE_TAGMANAGER_ENVIROMENT_AUTH_STRING',
@@ -38,6 +38,12 @@ module.exports = {
       options: {
         trackingId: config.googleAnalyticsID,
         head: true,
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-mailchimp',
+      options: {
+        endpoint: process.env.MC_ENDPOINT,
       },
     },
     'gatsby-transformer-sharp',

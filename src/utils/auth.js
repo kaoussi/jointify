@@ -7,7 +7,6 @@ const AUTH0_DOMAIN = process.env.AUTH0_DOMAIN
 const AUTH0_CLIENT_ID = process.env.AUTH0_CLIENT_ID
 
 const isBrowser = typeof window !== 'undefined'
-let profile = false
 
 export default class Auth {
   auth0 = isBrowser
@@ -37,8 +36,6 @@ export default class Auth {
       localStorage.removeItem('id_token')
       localStorage.removeItem('expires_at')
     }
-
-    profile = false
   }
 
   handleAuthentication = () => {
