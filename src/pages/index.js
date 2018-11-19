@@ -12,7 +12,6 @@ import {
 import Layout from '../components/layout'
 import Features from '../components/Features'
 import TeamTestimonial from '../components/TeamTestimonial'
-import Pricing from '../components/Pricing'
 import CtaSection from '../components/CtaFormSection'
 import Conversation from '../../static/svg/conversation.svg'
 
@@ -100,7 +99,7 @@ class IndexPage extends React.Component {
                     smooth={true}
                     duration={500}
                   >
-                    Find your mentor Now
+                    Get Started
                   </Link>
                 </p>
                 <Div className="hero-media">{IllustrationSrc}</Div>
@@ -108,11 +107,10 @@ class IndexPage extends React.Component {
             </div>
           </section>
           <Features />
+          <TeamTestimonial />
           <Element name="test1" className="element">
-            <TeamTestimonial />
+            <CtaSection />
           </Element>
-          <Pricing />
-          <CtaSection />
         </main>
       </Layout>
     )

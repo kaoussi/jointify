@@ -1,40 +1,7 @@
 import React, { Component } from 'react'
 import { Link } from 'gatsby'
 
-import Auth from '../utils/auth'
-
-const auth = new Auth()
-
 class Navbar extends Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      authenticated: false,
-    }
-  }
-
-  login() {
-    auth.login()
-
-    this.setState({
-      authenticated: auth.isAuthenticated(),
-    })
-  }
-
-  logout() {
-    auth.logout()
-
-    this.setState({
-      authenticated: auth.isAuthenticated(),
-    })
-  }
-
-  componentDidMount() {
-    this.setState({
-      authenticated: auth.isAuthenticated(),
-    })
-  }
-
   render() {
     return (
       <div className="site-header-inner">
@@ -69,31 +36,6 @@ class Navbar extends Component {
             </Link>
           </h1>
         </div>
-        <ul className="header-links list-reset m-0">
-          <li>
-            {!this.state.authenticated && (
-              <Link
-                onClick={this.login.bind(this)}
-                to="#"
-                className="button button-sm button-shadow"
-              >
-                Get Started
-              </Link>
-            )}
-            {this.state.authenticated && (
-              <span>
-                <Link
-                  to="#"
-                  onClick={this.logout.bind(this)}
-                  className="button button-sm button-shadow"
-                >
-                  Log Out
-                  {auth.getUserName() && <span> ({auth.getUserName()})</span>}
-                </Link>
-              </span>
-            )}
-          </li>
-        </ul>
       </div>
     )
   }
