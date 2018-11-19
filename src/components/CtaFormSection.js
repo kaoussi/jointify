@@ -32,7 +32,7 @@ class CtaSection extends React.Component {
     console.log(result)
     swal({
       title: result.result,
-      text: result.msg,
+      html: result.msg,
       icon: 'success',
       button: 'OK.!',
     })
