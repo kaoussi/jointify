@@ -40,8 +40,6 @@ const Layout = ({ children }) => (
           />
           <link rel="author" href="artisoft.ma" />
           <link rel="me" href="https://www.artisoft.ma" type="text/html" />
-          <link rel="me" href="mailto:contact@artisoft.ma" />
-          <link rel="me" href="sms:+212654524639" />
           <title>{data.site.siteMetadata.title}</title>
           <base href="https://jointify.artisoft.ma/" />
           <link

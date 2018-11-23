@@ -54,6 +54,7 @@ class CtaSection extends React.Component {
             <form onSubmit={this._handleSubmit}>
               <div className="footer-form newsletter-form field field-grouped">
                 <div className="control control-expanded">
+                  <label htmlFor="mailchim-email" hidden />
                   <input
                     className="input"
                     type="email"
