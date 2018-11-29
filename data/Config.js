@@ -1,7 +1,8 @@
 module.exports = {
   title: 'Jointify',
   author: 'Artisoft',
-  url: 'https://jointify.artisoft.ma',
+  // url: 'https://jointify.artisoft.ma',
+  url: '/',
   description: 'On-demand Mentorship online.',
   googleAnalyticsID: 'UA-120237762-2',
   googleTagManagerID: 'GTM-PD7FPFG',
