@@ -3,12 +3,12 @@ import styled from 'styled-components'
 
 const Card = styled.img``
 
-const testimonialCard = ({ name, content, image, position, link }) => (
+const testimonialCard = ({ name, content, image, position }) => (
   <div className="testimonial text-center text-xs is-revealing">
     <div className="testimonial-inner">
       <div className="testimonial-main">
         <div className="testimonial-header">
-          <Card src={image} alt="" />
+          <Card src={image} alt={name} height="153px" width="153px" />
         </div>
         <div className="testimonial-body">
           <p>{content}</p>
@@ -17,7 +17,7 @@ const testimonialCard = ({ name, content, image, position, link }) => (
       <div className="testimonial-footer">
         <div className="testimonial-name">{name}</div>
         <div className="testimonial-link">
-          <a href={link}>{position}</a>
+          <p>{position}</p>
         </div>
       </div>
     </div>

@@ -2,7 +2,7 @@ import React from 'react'
 
 import TestimonialCard from './TestimonialCard'
 import Card1 from '../images/mentors/souhail.jpg'
-import Card2 from '../images/mentors/ismail.jpg'
+import Card2 from '../images/mentors/hamza.jpg'
 import Card3 from '../images/mentors/aya.jpeg'
 
 const TeamTestimonial = () => (
@@ -15,22 +15,19 @@ const TeamTestimonial = () => (
             name="KAOUSSI Souhail"
             content=""
             image={Card1}
-            link="https://www.artisoft.ma"
-            position="Ceo & Founder @Artisoft.ma"
+            position="Full stack Developer"
           />
           <TestimonialCard
             name="ZAGHNIN Aya"
             content=""
             image={Card3}
-            link="https://www.artisoft.ma"
-            position="Business consultant @Artisoft.ma"
+            position="Business consultant"
           />
           <TestimonialCard
-            name="GHALLOU Ismail"
+            name="GUESSOUS Hamza"
             content=""
             image={Card2}
-            link="https://www.obytes.com"
-            position="FullStack Web developer @Obytes"
+            position="Professional Trader"
           />
         </div>
       </div>

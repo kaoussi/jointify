@@ -2,7 +2,7 @@ import React from 'react'
 
 import MentorCard from './MentorCard'
 import Card1 from '../images/mentors/souhail.jpg'
-import Card2 from '../images/mentors/ismail.jpg'
+import Card2 from '../images/mentors/hamza.jpg'
 import Card3 from '../images/mentors/aya.jpeg'
 
 const MentorsSection = () => (
@@ -25,8 +25,8 @@ const MentorsSection = () => (
           image={Card1}
         />
         <MentorCard
-          title="GHALLOU Ismail"
-          content="FullStack Web Developer @Obytes"
+          title="GUESSOUSS Hamza"
+          content="Professional Trader"
           image={Card2}
         />
       </div>
