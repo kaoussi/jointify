@@ -1,7 +1,7 @@
 module.exports = {
   title: 'Jointify',
   author: 'Artisoft',
-  // url: 'https://jointify.artisoft.ma',
+  url: 'https://www.jointify.africa',
   url: '/',
   description: 'On-demand Mentorship online.',
   googleAnalyticsID: 'UA-120237762-2',
@@ -11,7 +11,7 @@ module.exports = {
   siteRss: '',
   contact: {
     email: 'contact@artisoft.ma',
-    phone: '+212-654-52-46-39',
+    phone: '+212-(0)654-52-46-39',
   },
   foundingDate: '2018',
 }

@@ -1,8 +1,8 @@
 <h1 align="center">
-  Jointify by <a href="https://www.artisoft.ma">Artisoft.ma</a>
+  <a hre="https://www.jointify.africa">Jointify</a> by <a href="https://www.artisoft.ma">Artisoft.ma</a>
 </h1>
 
-Official Source code of Jointify, Get mentorship from the right people.
+Official Source code of Jointify, Mentoring & Reuniting youth of Africa from Africa.
 
 ## 🚀 Quick start
 
