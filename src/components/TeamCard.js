@@ -3,8 +3,8 @@ import styled from 'styled-components'
 
 const Card = styled.img``
 
-const testimonialCard = ({ name, content, image, position }) => (
-  <div className="testimonial text-center text-xs is-revealing">
+const TeamCard = ({ name, content, image, position }) => (
+  <div className="team-card text-center text-xs is-revealing">
     <div className="testimonial-inner">
       <div className="testimonial-main">
         <div className="testimonial-header">
@@ -24,4 +24,4 @@ const testimonialCard = ({ name, content, image, position }) => (
   </div>
 )
 
-export default testimonialCard
+export default TeamCard

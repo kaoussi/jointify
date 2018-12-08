@@ -10,11 +10,19 @@ class Navbar extends Component {
       <div className="site-header-inner">
         <div className="brand header-brand">
           <h1 className="m-0">
-            <Link to="/">
-            {logo}
-            </Link>
+            <Link to="/">{logo}</Link>
           </h1>
         </div>
+        <ul class="header-links list-reset m-0">
+          <li>
+            <Link to="/">Home</Link>
+          </li>
+          <li>
+            <Link to="/team" className="button button-sm button-shadow">
+              Our Team
+            </Link>
+          </li>
+        </ul>
       </div>
     )
   }

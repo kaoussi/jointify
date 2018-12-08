@@ -1,33 +1,31 @@
 import React from 'react'
+import styled from 'styled-components'
 
-import TestimonialCard from './TestimonialCard'
+import TeamCard from './TeamCard'
 import Card1 from '../images/mentors/souhail.jpg'
-import Card2 from '../images/mentors/hamza.jpg'
 import Card3 from '../images/mentors/aya.jpeg'
 
-const TeamTestimonial = () => (
+const H2 = styled.h2`
+  color: #fff;
+`
+
+const Team = () => (
   <section className="testimonials section">
     <div className="container">
       <div className="ftestimonials-inner section-inner">
-        <h2 className="section-title mt-0 text-center">Our Mentors</h2>
+        <H2 className="section-title mt-0 text-center">Meet Our Team</H2>
         <div className="testimonials-wrap">
-          <TestimonialCard
+          <TeamCard
             name="KAOUSSI Souhail"
             content=""
             image={Card1}
-            position="Full stack Developer"
+            position="Founder & CEO @Artisoft.ma"
           />
-          <TestimonialCard
+          <TeamCard
             name="ZAGHNIN Aya"
             content=""
             image={Card3}
             position="Business consultant"
-          />
-          <TestimonialCard
-            name="GUESSOUS Hamza"
-            content=""
-            image={Card2}
-            position="Professional Trader"
           />
         </div>
       </div>
@@ -35,4 +33,4 @@ const TeamTestimonial = () => (
   </section>
 )
 
-export default TeamTestimonial
+export default Team

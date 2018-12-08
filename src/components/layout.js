@@ -41,7 +41,6 @@ const Layout = ({ children }) => (
           <link rel="author" href="artisoft.ma" />
           <link rel="me" href="https://www.artisoft.ma" type="text/html" />
           <title>{data.site.siteMetadata.title}</title>
-          <base href="https://jointify.artisoft.ma/" />
           <link
             href="https://fonts.googleapis.com/css?family=Lato:400,400i|PT+Serif:700"
             rel="stylesheet"

@@ -11,7 +11,7 @@ import {
 
 import Layout from '../components/layout'
 import Features from '../components/Features'
-import TeamTestimonial from '../components/TeamTestimonial'
+import MentorsSection from '../components/MentorsSection'
 import CtaSection from '../components/CtaFormSection'
 import Conversation from '../../static/svg/conversation.svg'
 
@@ -107,7 +107,7 @@ class IndexPage extends React.Component {
             </div>
           </section>
           <Features />
-          <TeamTestimonial />
+          <MentorsSection />
           <Element name="test1" className="element">
             <CtaSection />
           </Element>
