@@ -1,6 +1,7 @@
 import React from 'react'
+import { StaticQuery, graphql } from 'gatsby'
 import { Helmet } from 'react-helmet'
-import styled from 'styled-components'
+import Img from 'gatsby-image'
 
 import {
   Link,
@@ -14,15 +15,23 @@ import Layout from '../components/layout'
 import Features from '../components/Features'
 import MentorsSection from '../components/MentorsSection'
 import CtaSection from '../components/CtaFormSection'
-import Conversation from '../../static/svg/conversation.svg'
 
-const SvgImage = styled(Conversation)`
-  height: 50vh;
-`
-
-const Div = styled.div``
-
-const IllustrationSrc = <SvgImage />
+const SvgImage = () => (
+  <StaticQuery
+    query={graphql`
+      query {
+        conversation: file(relativePath: { eq: "conversation.png" }) {
+          childImageSharp {
+            fixed {
+              ...GatsbyImageSharpFixed
+            }
+          }
+        }
+      }
+    `}
+    render={data => <Img fixed={data.conversation.childImageSharp.fixed} />}
+  />
+)
 
 class IndexPage extends React.Component {
   constructor(props) {
@@ -130,7 +139,9 @@ class IndexPage extends React.Component {
                       Get Started
                     </Link>
                   </p>
-                  <Div className="hero-media">{IllustrationSrc}</Div>
+                  <div className="hero-media">
+                    <SvgImage />
+                  </div>
                 </div>
               </div>
             </section>
