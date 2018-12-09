@@ -8,6 +8,9 @@ const Clip = styled(ClipLoader)`
   display: block;
   margin: 0 auto;
   border-color: red;
+  @include media('<medium') {
+    text-align: center;
+  }
 `
 
 class CtaSection extends React.Component {

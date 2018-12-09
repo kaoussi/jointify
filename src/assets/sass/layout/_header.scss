@@ -12,6 +12,7 @@
         background: mix(color(secondary, 1), color(additional, 2));
         background: linear-gradient(57deg, color(secondary, 1) 0%, color(additional, 2) 100%);
         transform-origin: 0;
+        transform: skewY(-12deg);
     }
 }
 

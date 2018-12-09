@@ -99,3 +99,10 @@
         }
     }
 }
+
+@include media( '<medium' ) {
+
+    .control {
+        text-align: center;
+    }
+}

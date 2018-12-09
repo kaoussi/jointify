@@ -101,3 +101,10 @@
 .button-block {
     display: flex;
 }
+
+@include media( '<medium' ) {
+    .button-block {
+        display: block;
+        width: 100%;
+    }
+}
