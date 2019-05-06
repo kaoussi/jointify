@@ -3,7 +3,7 @@ import React from 'react'
 import MentorCard from './MentorCard'
 import Card1 from '../images/mentors/abdelhak.jpeg'
 import Card2 from '../images/mentors/hamza.jpg'
-import Card3 from '../images/mentors/smakosh.jpg'
+import Card3 from '../images/mentors/ahmed.jpeg'
 
 const MentorsSection = () => (
   <section className="testimonials section">
@@ -22,9 +22,9 @@ const MentorsSection = () => (
             position="Professional Trader"
           />
           <MentorCard
-            name="GHALLOU Ismail (Smakosh) "
+            name="El AZZABI Ahmed"
             image={Card3}
-            position="Full stack Developer & Designer"
+            position="Software Engineer"
           />
         </div>
       </div>
