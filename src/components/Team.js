@@ -19,13 +19,13 @@ const Team = () => (
             name="KAOUSSI Souhail"
             content=""
             image={Card1}
-            position="Founder & CEO @Artisoft.ma"
+            position="Co-Founder & CTO"
           />
           <TeamCard
             name="ZAGHNIN Aya"
             content=""
             image={Card3}
-            position="Business consultant"
+            position="Co-Founder"
           />
         </div>
       </div>
