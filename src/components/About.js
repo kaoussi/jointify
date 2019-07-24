@@ -25,7 +25,7 @@ const About = () => (
         </div>
         <div className="feature-extended-body">
           <h3 className="mt-0">Vision</h3>
-          <p>To be the Largest community, made for and by Africans, to which people turn to for empowering consultancies and inspiring mentorships.
+          <p>To become the Largest community, made for and by Africans, to which people turn to for empowering consultancies and inspiring mentorships.
           </p>
         </div>
       </div>
