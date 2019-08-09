@@ -13,18 +13,6 @@ class Navbar extends Component {
             <Link to="/">{logo}</Link>
           </h1>
         </div>
-        <ul className="header-links list-reset m-0">
-        <li>
-            <Link to="/about">
-              About Us
-            </Link>
-          </li>
-          <li>
-            <Link to="/team" className="button button-sm button-shadow">
-              Our Team
-            </Link>
-          </li>
-        </ul>
       </div>
     )
   }

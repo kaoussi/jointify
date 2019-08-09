@@ -3,7 +3,6 @@ import styled from 'styled-components'
 
 import TeamCard from './TeamCard'
 import Card1 from '../images/mentors/souhail.jpg'
-import Card3 from '../images/mentors/aya.jpeg'
 
 const H2 = styled.h2`
   color: #fff;
@@ -20,12 +19,6 @@ const Team = () => (
             content=""
             image={Card1}
             position="Co-Founder & CTO"
-          />
-          <TeamCard
-            name="ZAGHNIN Aya"
-            content=""
-            image={Card3}
-            position="Co-Founder"
           />
         </div>
       </div>
