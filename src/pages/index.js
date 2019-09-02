@@ -16,7 +16,7 @@ import Features from '../components/Features'
 import MentorsSection from '../components/MentorsSection'
 import CtaSection from '../components/CtaFormSection'
 
-const SvgImage = () => (
+const ConversationImage = () => (
   <StaticQuery
     query={graphql`
       query {
@@ -140,7 +140,7 @@ class IndexPage extends React.Component {
                     </Link>
                   </p>
                   <div className="hero-media">
-                    <SvgImage />
+                    <ConversationImage />
                   </div>
                 </div>
               </div>
