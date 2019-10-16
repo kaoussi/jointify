@@ -51,7 +51,7 @@ class CtaSection extends React.Component {
             <div className="newsletter-header text-center">
               <h2 className="section-title mt-0">Stay in the know</h2>
               <p className="section-paragraph">
-                Be The first to learn about our offers.
+                Be the First to learn about our offers.
               </p>
             </div>
             <form onSubmit={this._handleSubmit}>
