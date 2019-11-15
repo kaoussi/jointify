@@ -1,8 +1,8 @@
 .testimonials {
 
-	.section-inner {
-		padding-top: 0;
-	}
+    .section-inner {
+        padding-top: 0;
+    }
 
     .section-title {
         margin-bottom: 48px;
@@ -12,7 +12,8 @@
 .testimonials-wrap {
     display: flex;
     flex-wrap: wrap;
-	align-items: flex-start; /* Disable equal height */
+    align-items: flex-start;
+    /* Disable equal height */
     justify-content: center;
     margin-right: -12px;
     margin-left: -12px;
@@ -26,7 +27,8 @@
     }
 }
 
-.testimonial, .team-card {
+.testimonial,
+.team-card {
     padding: 12px;
     width: 344px;
     max-width: 344px;
@@ -41,7 +43,7 @@
     padding: 32px 24px;
     //height: 100%;
 
-    > * {
+    >* {
         width: 100%;
     }
 
@@ -59,20 +61,18 @@
 
 .testimonial-header {
 
-	img {
-		width: 150px;
-		height: auto;
-		margin: 0 auto;
-		border-radius: 50%;
-		@include shadow-sm;
-	}
+    img {
+        margin: 0 auto;
+        border-radius: 50%;
+        @include shadow-sm;
+    }
 }
 
 .testimonial-body {
 
-	p {
-		margin-bottom: 12px;
-	}
+    p {
+        margin-bottom: 12px;
+    }
 }
 
 .testimonial-footer {
@@ -80,44 +80,45 @@
 }
 
 .testimonial-name {
-	@include font-weight(semibold);
-	color: color(typography, 1);
+    @include font-weight(semibold);
+    color: color(typography, 1);
 }
 
 .testimonial-footer {
-	margin-bottom: 40px;
+    margin-bottom: 40px;
 }
 
-@include media( '>medium' ) {
+@include media('>medium') {
 
-	.testimonials {
+    .testimonials {
 
-	    .section-title {
-	        margin-bottom: 64px;
-	    }
-	}
+        .section-title {
+            margin-bottom: 64px;
+        }
+    }
 
-	.testimonial, .team-card {
-		width: 304px;
-		max-width: 304px;
-    } 
+    .testimonial,
+    .team-card {
+        width: 304px;
+        max-width: 304px;
+    }
 }
 
-@include media( '>large' ) {
+@include media('>large') {
 
-	.testimonials {
-		position: relative;
+    .testimonials {
+        position: relative;
 
-		.section-title {
-			margin-bottom: 80px;
-		}
-	}
+        .section-title {
+            margin-bottom: 80px;
+        }
+    }
 
-	.testimonial {
+    .testimonial {
 
-		&:nth-child(odd) {
-			margin-top: 48px;
-		}
+        &:nth-child(odd) {
+            margin-top: 48px;
+        }
     }
 
 }

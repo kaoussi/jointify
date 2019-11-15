@@ -1,7 +1,7 @@
 {
   "name": "jointify",
   "description": "Meet your mentor.",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "author": "Kaoussi Souhail <kaoussi.souhail@gmail.com>",
   "dependencies": {
     "dotenv": "^6.1.0",
