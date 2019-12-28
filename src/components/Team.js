@@ -19,7 +19,7 @@ const Team = () => (
             name="KAOUSSI Souhail"
             content=""
             image={Card1}
-            position="Co-Founder & CTO"
+            position="Co-Founder"
           />
           <TeamCard
             name="ZAGHNIN Aya"
