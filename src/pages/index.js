@@ -1,7 +1,7 @@
-import React from 'react'
-import { StaticQuery, graphql } from 'gatsby'
-import { Helmet } from 'react-helmet'
-import Img from 'gatsby-image'
+import React from "react"
+import { StaticQuery, graphql } from "gatsby"
+import { Helmet } from "react-helmet"
+import Img from "gatsby-image"
 
 import {
   Link,
@@ -9,12 +9,13 @@ import {
   Events,
   animateScroll as scroll,
   scroller,
-} from 'react-scroll'
+} from "react-scroll"
 
-import Layout from '../components/layout'
-import Features from '../components/Features'
-import MentorsSection from '../components/MentorsSection'
-import CtaSection from '../components/CtaFormSection'
+import Layout from "../components/layout"
+import Features from "../components/Features"
+import Covid from "../components/Covid"
+import MentorsSection from "../components/MentorsSection"
+import CtaSection from "../components/CtaFormSection"
 
 const ConversationImage = () => (
   <StaticQuery
@@ -40,51 +41,51 @@ class IndexPage extends React.Component {
   }
 
   componentDidMount() {
-    Events.scrollEvent.register('begin', function() {
-      console.log('begin', arguments)
+    Events.scrollEvent.register("begin", function() {
+      console.log("begin", arguments)
     })
 
-    Events.scrollEvent.register('end', function() {
-      console.log('end', arguments)
+    Events.scrollEvent.register("end", function() {
+      console.log("end", arguments)
     })
   }
   scrollToTop() {
     scroll.scrollToTop()
   }
   scrollTo() {
-    scroller.scrollTo('scroll-to-element', {
+    scroller.scrollTo("scroll-to-element", {
       duration: 800,
       delay: 0,
-      smooth: 'easeInOutQuart',
+      smooth: "easeInOutQuart",
     })
   }
   scrollToWithContainer() {
     let goToContainer = new Promise((resolve, reject) => {
-      Events.scrollEvent.register('end', () => {
+      Events.scrollEvent.register("end", () => {
         resolve()
-        Events.scrollEvent.remove('end')
+        Events.scrollEvent.remove("end")
       })
 
-      scroller.scrollTo('scroll-container', {
+      scroller.scrollTo("scroll-container", {
         duration: 800,
         delay: 0,
-        smooth: 'easeInOutQuart',
+        smooth: "easeInOutQuart",
       })
     })
 
     goToContainer.then(() =>
-      scroller.scrollTo('scroll-container-second-element', {
+      scroller.scrollTo("scroll-container-second-element", {
         duration: 800,
         delay: 0,
-        smooth: 'easeInOutQuart',
-        containerId: 'scroll-container',
+        smooth: "easeInOutQuart",
+        containerId: "scroll-container",
       })
     )
   }
 
   componentWillUnmount() {
-    Events.scrollEvent.remove('begin')
-    Events.scrollEvent.remove('end')
+    Events.scrollEvent.remove("begin")
+    Events.scrollEvent.remove("end")
   }
 
   render() {
@@ -146,6 +147,7 @@ class IndexPage extends React.Component {
               </div>
             </section>
             <Features />
+            <Covid />
             <MentorsSection />
             <Element name="test1" className="element">
               <CtaSection />

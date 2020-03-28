@@ -1,3 +1,40 @@
+.announcement {
+  position: relative;
+  transition: 0.2s;
+  z-index: 1;
+
+  &__open {
+    top: 0;
+  }
+
+  a {
+    color: white;
+    transition: 0.25s ease;
+
+    &:hover {
+      opacity: 0.75;
+    }
+  }
+
+  &__wrapper {
+    max-width: 1160px;
+    padding: 20px 10px;
+    margin: 0 auto;
+  }
+
+  &__title {
+    font-size: 21px;
+    line-height: 42px;
+    text-align: center;
+  }
+}
+
+__wrapper {
+  max-width: 1160px;
+  padding: 20px 10px;
+  margin: 0 auto;
+}
+
 .is-boxed {
   background: color(bg, 2);
 }
@@ -26,7 +63,7 @@ main {
   padding-bottom: 48px;
 }
 
-@include media('>medium') {
+@include media(">medium") {
   .section-inner {
     padding-top: 80px;
     padding-bottom: 80px;
