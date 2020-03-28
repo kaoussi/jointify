@@ -11,7 +11,7 @@ const Covid = () => (
               Jointify.africa recognizes the struggles of your business with the
               current COVID 19 Pandemic. As a nascent mentorship platform, we
               have decided to launch free consulting offered by market pundits
-              all over morocco to help you adapt your business to the current
+              all over Morocco to help you adapt your business to the current
               pandemic.
             </p>
           </div>
