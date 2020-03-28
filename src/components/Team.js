@@ -1,9 +1,9 @@
-import React from 'react'
-import styled from 'styled-components'
+import React from "react"
+import styled from "styled-components"
 
-import TeamCard from './TeamCard'
-import Card1 from '../images/mentors/souhail.jpg'
-import Card3 from '../images/mentors/aya.jpg'
+import TeamCard from "./TeamCard"
+import Card1 from "../images/mentors/souhail.png"
+import Card3 from "../images/mentors/aya.png"
 
 const H2 = styled.h2`
   color: #fff;

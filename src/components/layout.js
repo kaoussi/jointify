@@ -11,9 +11,7 @@ const Layout = ({ children }) => {
     <>
       <Helmet>
         <script>
-          dangerouslySetInnerHTML=
-          {{
-            __html: `
+          {`
 "use strict";
 
 !function() {
@@ -38,9 +36,7 @@ const Layout = ({ children }) => {
 }();
 drift.SNIPPET_VERSION = '0.3.1';
 drift.load('c886du63zgks');
-`,
-          }}
-          />
+`}
         </script>
         <body className="is-boxed" />
       </Helmet>

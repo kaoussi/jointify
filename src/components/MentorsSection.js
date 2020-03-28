@@ -1,9 +1,9 @@
-import React from 'react'
+import React from "react"
 
-import MentorCard from './MentorCard'
-import Card1 from '../images/mentors/abdelhak.jpeg'
-import Card2 from '../images/mentors/asmae.jpg'
-import Card3 from '../images/mentors/ahmed.jpeg'
+import MentorCard from "./MentorCard"
+import Card1 from "../images/mentors/abdelhak.png"
+import Card2 from "../images/mentors/asmae.png"
+import Card3 from "../images/mentors/ahmed.png"
 
 const MentorsSection = () => (
   <section className="testimonials section">
@@ -19,12 +19,12 @@ const MentorsSection = () => (
           <MentorCard
             name="GAIZ Asmae"
             image={Card2}
-            position="World explorer"
+            position="Neuro Linguistic Programming Mentor"
           />
           <MentorCard
             name="El AZZABI Ahmed"
             image={Card3}
-            position="Software Engineer"
+            position="Software Engineer @ Automattic"
           />
         </div>
       </div>
