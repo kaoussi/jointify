@@ -1,21 +1,21 @@
-import React from 'react'
-import addToMailchimp from 'gatsby-plugin-mailchimp'
-import swal from 'sweetalert2'
-import { ClipLoader } from 'react-spinners'
-import styled from 'styled-components'
+import React from "react"
+import addToMailchimp from "gatsby-plugin-mailchimp"
+import Swal from "sweetalert2"
+import { ClipLoader } from "react-spinners"
+import styled from "styled-components"
 
 const Clip = styled(ClipLoader)`
   display: block;
   margin: 0 auto;
   border-color: red;
-  @include media('<medium') {
+  @include media("<medium") {
     text-align: center;
   }
 `
 
 class CtaSection extends React.Component {
   state = {
-    email: '',
+    email: "",
     mailChimpResult: null,
     loading: false,
   }
@@ -24,20 +24,16 @@ class CtaSection extends React.Component {
     event.preventDefault()
 
     const { email } = this.state
-    const listFields = { email }
     this.setState({ loading: true })
 
-    const result = await addToMailchimp(email, listFields)
-    // I recommend setting `result` to React state
-    // but you can do whatever you want
+    const result = await addToMailchimp(email)
 
-    this.setState({ mailChimpResult: result, email: '' })
+    this.setState({ mailChimpResult: result, email: "" })
     console.log(result)
-    swal({
+    Swal.fire({
+      icon: result.result,
       title: result.result,
-      html: result.msg,
-      icon: 'success',
-      button: 'OK.!',
+      footer: result.msg,
     })
     this.setState({ loading: false })
   }
@@ -73,9 +69,9 @@ class CtaSection extends React.Component {
                 <div className="control">
                   {loading ? (
                     <Clip
-                      sizeUnit={'px'}
+                      sizeUnit={"px"}
                       size={150}
-                      color={'#123abc'}
+                      color={"#123abc"}
                       loading={loading}
                     />
                   ) : (

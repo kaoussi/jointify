@@ -1,6 +1,6 @@
-const config = require('./data/Config')
+const config = require("./data/Config")
 
-require('dotenv').config({
+require("dotenv").config({
   path: `.env.${process.env.NODE_ENV}`,
 })
 
@@ -11,7 +11,7 @@ module.exports = {
     author: config.author,
   },
   plugins: [
-    'gatsby-plugin-react-helmet',
+    "gatsby-plugin-react-helmet",
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -34,34 +34,34 @@ module.exports = {
       },
     },
     {
-      resolve: 'gatsby-plugin-google-analytics',
+      resolve: "gatsby-plugin-google-analytics",
       options: {
         trackingId: config.googleAnalyticsID,
         head: true,
       },
     },
     {
-      resolve: 'gatsby-plugin-mailchimp',
+      resolve: "gatsby-plugin-mailchimp",
       options: {
         endpoint: process.env.MC_ENDPOINT,
       },
     },
-    'gatsby-transformer-sharp',
-    'gatsby-plugin-sharp',
+    "gatsby-transformer-sharp",
+    "gatsby-plugin-sharp",
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: config.title,
         short_name: config.title,
-        start_url: '/',
+        start_url: "/",
         background_color: config.backgroundColor,
         theme_color: config.themeColor,
-        display: 'minimal-ui',
-        icon: 'src/images/favicon.png',
+        display: "minimal-ui",
+        icon: "src/images/favicon.png",
       },
     },
-    'gatsby-plugin-sass',
-    'gatsby-plugin-offline',
-    'gatsby-plugin-react-svg',
+    "gatsby-plugin-sass",
+    "gatsby-plugin-offline",
+    "gatsby-plugin-react-svg",
   ],
 }
