@@ -1,17 +1,19 @@
-import React from 'react'
-import { Helmet } from 'react-helmet'
+import React from "react"
+import { Helmet } from "react-helmet"
 
-import Header from './header'
-import Footer from './Footer'
+import Header from "./header"
+import Footer from "./Footer"
 
-import '../assets/sass/style.scss'
+import "../assets/sass/style.scss"
 
 const Layout = ({ children }) => {
   return (
     <>
       <Helmet>
         <script>
-          {`
+          dangerouslySetInnerHTML=
+          {{
+            __html: `
 "use strict";
 
 !function() {
@@ -36,7 +38,9 @@ const Layout = ({ children }) => {
 }();
 drift.SNIPPET_VERSION = '0.3.1';
 drift.load('c886du63zgks');
-`}
+`,
+          }}
+          />
         </script>
         <body className="is-boxed" />
       </Helmet>

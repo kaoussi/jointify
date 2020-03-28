@@ -2,7 +2,7 @@
   "name": "jointify",
   "private": true,
   "description": "Meet your mentor.",
-  "version": "0.4.0",
+  "version": "0.5.0",
   "license": "UNLICENSED",
   "author": "Jointify <contact@jointify.africa>",
   "scripts": {
