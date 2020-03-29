@@ -1,5 +1,6 @@
 .announcement {
   position: relative;
+  background: #c1efe7;
   transition: 0.2s;
   z-index: 1;
 
@@ -20,6 +21,12 @@
     max-width: 1160px;
     padding: 20px 10px;
     margin: 0 auto;
+
+    &--link {
+      color: black !important;
+      margin-left: 10px;
+      text-decoration: underline !important;
+    }
   }
 
   &__title {
@@ -27,12 +34,6 @@
     line-height: 42px;
     text-align: center;
   }
-}
-
-__wrapper {
-  max-width: 1160px;
-  padding: 20px 10px;
-  margin: 0 auto;
 }
 
 .is-boxed {
