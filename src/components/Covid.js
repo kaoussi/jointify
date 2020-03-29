@@ -6,13 +6,12 @@ const Covid = () => (
       <div className="features-extended-inner section-inner has-top-divider">
         <div className="features-extended-header text-center">
           <div className="container-sm">
-            <h2 className="section-title mt-0">Jointify x COVID 19</h2>
+            <h2 className="section-title mt-0">Jointify x COVID-19</h2>
             <p className="section-paragraph">
               Jointify.africa recognizes the struggles of your business with the
-              current COVID 19 Pandemic. As a nascent mentorship platform, we
-              have decided to launch free consulting offered by market pundits
-              all over Morocco to help you adapt your business to the current
-              pandemic.
+              current COVID-19 Pandemic. As a nascent mentorship platform, we
+              have decided to launch free consulting offered by experts all over
+              Morocco to help you adapt your business to the current pandemic.
             </p>
           </div>
         </div>
@@ -468,7 +467,7 @@ const Covid = () => (
             </svg>
           </div>
           <div className="feature-extended-body">
-            <h3 className="mt-0">Is your startup qualified?</h3>
+            <h3 className="mt-0">Is your business qualified?</h3>
             <p>
               Startups and SMEs which does not exceed MAD 10M yearly in turnover
             </p>
@@ -824,9 +823,9 @@ const Covid = () => (
             </svg>
           </div>
           <div className="feature-extended-body">
-            <h3 className="mt-0">You're affected by COVID 19</h3>
+            <h3 className="mt-0">You're affected by COVID-19</h3>
             <p>
-              Operating in sectors directly (or indirectly) impacted by COVID 19
+              Operating in sectors directly (or indirectly) impacted by COVID-19
             </p>
           </div>
         </div>
