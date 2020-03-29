@@ -131,11 +131,11 @@ class IndexPage extends React.Component {
                   </p>
                   <p className="hero-cta is-revealing">
                     <Link
-                      className="button button-secondary button-shadow test1"
-                      to="test1"
+                      className="button button-secondary button-shadow callToAction"
+                      to="callToAction"
                       spy={true}
                       smooth={true}
-                      duration={500}
+                      duration={1000}
                     >
                       Get Started
                     </Link>
@@ -147,9 +147,9 @@ class IndexPage extends React.Component {
               </div>
             </section>
             <Features />
-            <Covid />
+            <Covid name="requirements" className="element" />
             <MentorsSection />
-            <Element name="test1" className="element">
+            <Element name="callToAction" className="element">
               <CtaSection />
             </Element>
           </main>

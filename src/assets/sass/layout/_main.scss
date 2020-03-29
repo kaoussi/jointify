@@ -23,8 +23,8 @@
     margin: 0 auto;
 
     &--link {
+      cursor: pointer;
       color: black !important;
-      margin-left: 10px;
       text-decoration: underline !important;
     }
   }

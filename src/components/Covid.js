@@ -466,13 +466,8 @@ const Covid = () => (
             </svg>
           </div>
           <div className="feature-extended-body">
-            <h3 className="mt-0">
-              supported locations: Your business must be based in morocco
-            </h3>
-            <p>
-              If your startup is based in MOROCCO, please reach out to us by
-              filling this form.
-            </p>
+            <h3 className="mt-0">supported locations</h3>
+            <p>Your business must be based in morocco</p>
           </div>
         </div>
 
