@@ -147,7 +147,9 @@ class IndexPage extends React.Component {
               </div>
             </section>
             <Features />
-            <Covid name="requirements" className="element" />
+            <Element name="requirements" className="element">
+              <Covid />
+            </Element>
             <MentorsSection />
             <Element name="callToAction" className="element">
               <CtaSection />

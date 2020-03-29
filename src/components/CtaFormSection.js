@@ -29,7 +29,6 @@ class CtaSection extends React.Component {
     const result = await addToMailchimp(email)
 
     this.setState({ mailChimpResult: result, email: "" })
-    console.log(result)
     Swal.fire({
       icon: result.result,
       title: result.result,
