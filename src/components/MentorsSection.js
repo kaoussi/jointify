@@ -4,6 +4,8 @@ import MentorCard from "./MentorCard"
 import Card1 from "../images/mentors/abdelhak.png"
 import Card2 from "../images/mentors/asmae.png"
 import Card3 from "../images/mentors/ahmed.png"
+import Card4 from "../images/mentors/ferdaouss.png"
+import Card5 from "../images/mentors/soufiyane.png"
 
 const MentorsSection = () => (
   <section className="testimonials section">
@@ -25,6 +27,16 @@ const MentorsSection = () => (
             name="El AZZABI Ahmed"
             image={Card3}
             position="Software Engineer @ Automattic"
+          />
+          <MentorCard
+            name="NOUAMANI Ferdaous"
+            image={Card4}
+            position="General management and business plans"
+          />
+          <MentorCard
+            name="BENAALI OUMJOUD Soufiyane"
+            image={Card5}
+            position="Junior auditor @ Groupe Accor"
           />
         </div>
       </div>

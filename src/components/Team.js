@@ -3,6 +3,7 @@ import styled from "styled-components"
 
 import TeamCard from "./TeamCard"
 import Card1 from "../images/mentors/souhail.png"
+import Card2 from "../images/mentors/mohamed.png"
 import Card3 from "../images/mentors/aya.png"
 
 const H2 = styled.h2`
@@ -20,6 +21,12 @@ const Team = () => (
             content=""
             image={Card1}
             position="Co-Founder"
+          />
+          <TeamCard
+            name="AYATALLAH Mohammed"
+            content=""
+            image={Card2}
+            position="Business analyst"
           />
           <TeamCard
             name="ZAGHNIN Aya"

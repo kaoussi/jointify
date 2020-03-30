@@ -467,7 +467,7 @@ const Covid = () => (
           </div>
           <div className="feature-extended-body">
             <h3 className="mt-0">supported locations</h3>
-            <p>Your business must be based in morocco</p>
+            <p>Your business must be based in Morocco.</p>
           </div>
         </div>
 
