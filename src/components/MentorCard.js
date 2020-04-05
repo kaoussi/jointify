@@ -1,25 +1,25 @@
-import React from 'react'
-import styled from 'styled-components'
+import React from "react"
+import styled from "styled-components"
 
 const Card = styled.img`
-  width: 160px;
-  height: 160px;
+  width: 140px;
+  height: 140px;
 `
 
 const MentorCard = ({ name, content, image, position }) => (
-  <div className="testimonial text-center text-xs is-revealing">
-    <div className="testimonial-inner">
-      <div className="testimonial-main">
-        <div className="testimonial-header">
+  <div className="mentor text-center text-xs is-revealing">
+    <div className="mentor-inner">
+      <div className="mentor-main">
+        <div className="mentor-header">
           <Card src={image} alt={name} />
         </div>
-        <div className="testimonial-body">
+        <div className="mentor-body">
           <p>{content}</p>
         </div>
       </div>
-      <div className="testimonial-footer">
-        <div className="testimonial-name">{name}</div>
-        <div className="testimonial-link">
+      <div className="mentor-footer">
+        <div className="mentor-name">{name}</div>
+        <div className="mentor-link">
           <p>{position}</p>
         </div>
       </div>

@@ -1,23 +1,34 @@
-import React from 'react'
-import styled from 'styled-components'
+import React from "react"
+import { IconContext } from "react-icons"
+import { FaLinkedin } from "react-icons/fa"
 
-const Card = styled.img``
-
-const TeamCard = ({ name, content, image, position }) => (
+const TeamCard = ({ name, image, position, linkedin }) => (
   <div className="team-card text-center text-xs is-revealing">
-    <div className="testimonial-inner">
-      <div className="testimonial-main">
-        <div className="testimonial-header">
-          <Card src={image} alt={name} height="153px" width="153px" />
+    <div className="team-inner">
+      <div className="team-main">
+        <div className="team-header">
+          <img src={image} alt={name} height="153px" width="153px" />
         </div>
-        <div className="testimonial-body">
-          <p>{content}</p>
+        <div className="team-body">
+          <p>{""}</p>
         </div>
       </div>
-      <div className="testimonial-footer">
-        <div className="testimonial-name">{name}</div>
-        <div className="testimonial-link">
+      <div className="team-footer">
+        <div className="team-name">{name}</div>
+        <div className="team-link">
           <p>{position}</p>
+          <br />
+          <IconContext.Provider
+            value={{
+              color: "#2867b2",
+              className: "text-center-idb",
+              size: "2em",
+            }}
+          >
+            <a href={linkedin} rel="noopener noreferrer" target="_blank">
+              <FaLinkedin />
+            </a>
+          </IconContext.Provider>
         </div>
       </div>
     </div>

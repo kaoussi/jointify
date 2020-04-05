@@ -25,10 +25,11 @@ const Announcement = () => (
         , please fill{" "}
         <a
           target="_blank"
-          rel="noreferrer nofollow"
-          href="https://form.jotform.com/200875941747566"
+          rel="nofollow noopener"
+          href="https://form.jotform.com/200945026411546"
           className="announcement__wrapper--link"
         >
+          {" "}
           this short form
         </a>
         .{" "}
