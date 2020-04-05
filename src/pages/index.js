@@ -13,6 +13,7 @@ import Hero from "../components/Hero"
 import Features from "../components/Features"
 import Covid from "../components/Covid"
 import MentorsSection from "../components/MentorsSection"
+import Plans from "../components/Plans"
 import CtaSection from "../components/CtaFormSection"
 
 class IndexPage extends React.Component {
@@ -81,6 +82,9 @@ class IndexPage extends React.Component {
               <Covid />
             </Element>
             <MentorsSection />
+            <Element name="joinUs" className="element">
+              <Plans />
+            </Element>
             <Element name="callToAction" className="element">
               <CtaSection />
             </Element>

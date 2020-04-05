@@ -28,23 +28,19 @@ const MentorsSection = () => (
           <MentorCard
             name="El AZZABI Ahmed"
             image={ahmed}
-            position="Software Engineer @ Automattic"
+            position="Software Engineer"
           />
           <MentorCard
             name="NOUAMANI Ferdaous"
             image={fedaous}
-            position="General management and business plans"
+            position="Management"
           />
           <MentorCard
             name="BENAALI OUMJOUD Soufiyane"
             image={soufyane}
-            position="Credit Manager @ Groupe Accor"
+            position="Audit & Taxes"
           />
-          <MentorCard
-            name="LAAMARTI Sara"
-            image={sara}
-            position="Marketing @ Airbit"
-          />
+          <MentorCard name="LAAMARTI Sara" image={sara} position="Marketing" />
           <MentorCard
             name="ELOUAHABI Chaimâa"
             image={chaimae}

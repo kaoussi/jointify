@@ -1,9 +1,9 @@
-import React from 'react'
-import FeatureCard from './FeatureCard'
-import Icon1 from '../../static/svg/icon1.svg'
-import Icon2 from '../../static/svg/icon2.svg'
-import Icon3 from '../../static/svg/icon3.svg'
-import Icon4 from '../../static/svg/icon4.svg'
+import React from "react"
+import FeatureCard from "./FeatureCard"
+import Icon1 from "../../static/svg/icon1.svg"
+import Icon2 from "../../static/svg/icon2.svg"
+import Icon3 from "../../static/svg/icon3.svg"
+import Icon4 from "../../static/svg/icon4.svg"
 
 const Icon1Src = <Icon1 />
 
@@ -15,7 +15,7 @@ const Features = () => (
   <section className="features section text-center">
     <div className="container">
       <div className="features-inner section-inner has-top-divider">
-        <h2 className="section-title mt-0">What you get</h2>
+        <h2 className="section-title mt-0">How it works</h2>
         <div className="features-wrap">
           <FeatureCard
             title="Find your mentor"

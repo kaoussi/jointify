@@ -28,7 +28,7 @@ const Hero = () => (
           On-demand mentorship <br /> For aspiring creatives.
         </h1>
         <p className="hero-paragraph is-revealing">
-          Find the perfect mentor to help you launch your creative career.
+          Find the perfect mentor to help kickstart your business.
         </p>
         <p className="hero-cta is-revealing">
           <Link

@@ -22,16 +22,16 @@ const Announcement = () => (
         >
           requirements
         </Link>
-        , please fill{" "}
-        <a
-          target="_blank"
-          rel="nofollow noopener"
-          href="https://form.jotform.com/200945026411546"
-          className="announcement__wrapper--link"
+        , please{" "}
+        <Link
+          className="announcement__wrapper--link joinUs"
+          to="joinUs"
+          spy={true}
+          smooth={true}
+          duration={2000}
         >
-          {" "}
-          this short form
-        </a>
+          Join us
+        </Link>
         .{" "}
       </p>
     </div>
