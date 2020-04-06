@@ -5,6 +5,18 @@ const Head = () => (
   <Helmet>
     <meta charSet="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <meta property="og:title" content="Jointify" />
+    <meta
+      property="og:image"
+      content="https://images.unsplash.com/photo-1526948531399-320e7e40f0ca?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=900&q=60"
+    />
+    <meta
+      property="og:description"
+      content="Find the perfect mentor to kickstart your business"
+    />
+    <meta property="og:url" content="https://www.jointify.africa" />
+
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1, viewport-fit=cover"
