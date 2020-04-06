@@ -379,7 +379,7 @@ const Covid = () => (
           <div className="feature-extended-body">
             <h3 className="mt-0">Is your business qualified?</h3>
             <p>
-              Startups and SMEs which does not exceed MAD 10M yearly in turnover
+              Startups and SMEs which do not exceed MAD 10M yearly in turnover
             </p>
           </div>
         </div>
@@ -466,7 +466,7 @@ const Covid = () => (
             </svg>
           </div>
           <div className="feature-extended-body">
-            <h3 className="mt-0">supported locations</h3>
+            <h3 className="mt-0">Supported locations</h3>
             <p>Your business must be based in Morocco.</p>
           </div>
         </div>

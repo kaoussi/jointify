@@ -25,10 +25,10 @@ const Hero = () => (
     <div className="container-sm">
       <div className="hero-inner">
         <h1 className="hero-title h2-mobile mt-0 is-revealing">
-          On-demand mentorship <br /> For aspiring creatives.
+          On-demand mentorship for aspiring creatives
         </h1>
         <p className="hero-paragraph is-revealing">
-          Find the perfect mentor to help kickstart your business.
+          Find the perfect mentor to kickstart your business
         </p>
         <p className="hero-cta is-revealing">
           <Link
@@ -36,7 +36,7 @@ const Hero = () => (
             to="callToAction"
             spy={true}
             smooth={true}
-            duration={1000}
+            duration={1500}
           >
             Get Started
           </Link>

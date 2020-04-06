@@ -11,7 +11,7 @@ const Plans = () => (
               <div className="plans-table-main">
                 <div className="plans-table-header">
                   <div className="plans-table-title mt-12 mb-16 text-secondary text-center">
-                    Company
+                    Businesses
                   </div>
                   <div className="plans-table-price mb-24 pb-32">{""}</div>
                 </div>
@@ -30,7 +30,7 @@ const Plans = () => (
                         />
                       </svg>
                     </span>
-                    <span>Based in Morocco.</span>
+                    <span>Based in Morocco</span>
                   </li>
                   <li>
                     <span className="list-icon">
@@ -46,7 +46,7 @@ const Plans = () => (
                         />
                       </svg>
                     </span>
-                    <span>Does Not exceed MAD 10M yearly in turnover.</span>
+                    <span>Do not exceed MAD 10M yearly in turnover</span>
                   </li>
                   <li>
                     <span className="list-icon">
@@ -62,7 +62,7 @@ const Plans = () => (
                         />
                       </svg>
                     </span>
-                    <span>Directly or Indirectly impacted by COVID19.</span>
+                    <span>Directly or Indirectly impacted by COVID19</span>
                   </li>
                 </ul>
               </div>
@@ -83,7 +83,7 @@ const Plans = () => (
               <div className="plans-table-main">
                 <div className="plans-table-header">
                   <div className="plans-table-title mt-12 mb-16 text-primary text-center">
-                    Mentor
+                    Mentors
                   </div>
                   <div className="plans-table-price mb-24 pb-32">{""}</div>
                 </div>
@@ -91,9 +91,9 @@ const Plans = () => (
                   <li>
                     <span>
                       We welcome all professionals with relevant experience, in
-                      any field related to small businesses, Including
-                      (Technology, Finance, Management, Marketing, Human
-                      ressources, Security etc..)
+                      any field related to small businesses, including
+                      technology, finance, management, marketing, human
+                      ressources, security etc..
                     </span>
                   </li>
                 </ul>
