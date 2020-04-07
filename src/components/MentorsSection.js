@@ -25,13 +25,6 @@ const MentorsSection = () => (
             image={asmae}
             position="Neuro Linguistic Programming"
           />
-        </div>
-        <div className="mentors-wrap">
-          <MentorCard
-            name="NOUAMANI Ferdaous"
-            image={fedaous}
-            position="Management"
-          />
           <MentorCard
             name="El AZZABI Ahmed"
             image={ahmed}
@@ -39,6 +32,11 @@ const MentorsSection = () => (
           />
         </div>
         <div className="mentors-wrap">
+          <MentorCard
+            name="NOUAMANI Ferdaous"
+            image={fedaous}
+            position="Management"
+          />
           <MentorCard
             name="BENAALI OUMJOUD Soufiyane"
             image={soufyane}

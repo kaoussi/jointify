@@ -8,7 +8,7 @@ const Card = styled.img`
 
 const MentorCard = ({ name, content, image, position }) => (
   <div className="mentor text-center text-xs is-revealing">
-    <div className="mentor-inner">
+    <div className="">
       <div className="mentor-main">
         <div className="mentor-header">
           <Card src={image} alt={name} />
