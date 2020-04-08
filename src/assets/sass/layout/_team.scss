@@ -85,6 +85,8 @@
   margin-bottom: 40px;
 }
 
+// Media Queries
+
 @include media(">medium") {
   .teams {
     .section-title {
