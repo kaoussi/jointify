@@ -38,7 +38,7 @@ const Team = () => (
           <TeamCard
             name="HORRANE Mohamed"
             image={mohamed_horrane}
-            position="Venture Capital, Advisor @Jointify"
+            position="VC Associate, Advisor @Jointify"
             linkedin="https://www.linkedin.com/in/medhorrane/"
           />
         </div>
