@@ -3,7 +3,6 @@ import { Helmet } from "react-helmet"
 
 import Header from "./header"
 import Footer from "./Footer"
-import Announcement from "./Announcement"
 
 import "../assets/sass/style.scss"
 
@@ -41,7 +40,6 @@ drift.load('c886du63zgks');
         </script>
         <body className="is-boxed" />
       </Helmet>
-      <Announcement />
       <div className="body-wrap boxed-container">
         <Header />
         {children}
